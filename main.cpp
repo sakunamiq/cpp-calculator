@@ -10,8 +10,15 @@ void welcomeMessage() {
 
 int main() {
     welcomeMessage();
+    double num1, num2;
+    char operation;
 
-    cout << "Calculator is ready!" << endl;
+    cout << "Enter first number: "; cin >> num1;
 
+    cout << "Enter operation (+, -, *, /)"; cin >> operation;
+
+    cout << "Enter second number: "; cin >> num2;
+
+    cout << "You entered: " << num1 << " " << operation << " " << num2 << endl;
     return 0;
 }

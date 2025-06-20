@@ -1,16 +1,33 @@
 #include <iostream>
+#include <string>
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+using namespace std;
+
+void welcomeMessage() {
+    cout << "Welcome to simple C++ calculator" << endl;
+}
+
 int main() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the <b>lang</b> variable name to see how CLion can help you rename it.
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
-
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
+    double num1, num2, result;
+    char choice;
+    string operation_name;
+    welcomeMessage();
+    cout << "Enter your first number: "; cin >> num1;
+    cout << "Enter your second number: "; cin >> num2;
+    cout << "Enter your operation (+, -, *, /): "; cin >> choice;
+    switch (choice) {
+        case '+':
+            result = num1 + num2;
+            operation_name = "addition";
+            break;
+        case '-':
+            result = num1 - num2;
+            operation_name = "subtraction";
+            break;
+        default:
+            cerr << "Error: Invaild operation!";
+            return 1;
     }
-
+    cout << "Result of " << operation_name << " is " << result << endl;
     return 0;
-    // TIP See CLion help at <a href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>. Also, you can try interactive lessons for CLion by selecting 'Help | Learn IDE Features' from the main menu.
 }

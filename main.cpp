@@ -29,8 +29,19 @@ int main() {
             result = num1 * num2;
             operation_name = "multiply";
             break;
+        // branch add-division
+        case '/':
+            if (num2 == 0) {
+                cerr << "Error: Division by zero!" << endl;
+                return 1;
+            }
+            else {
+                result = num1 / num2;
+                operation_name = "division";
+            }
+            break;
         default:
-            cerr << "Error: Invaild operation!";
+            cerr << "Error: Invalid operation!";
             return 1;
     }
     cout << "Result of " << operation_name << " is " << result << endl;

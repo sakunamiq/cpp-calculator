@@ -24,6 +24,11 @@ int main() {
             result = num1 - num2;
             operation_name = "subtraction";
             break;
+        // branch add-multiply
+        case '*':
+            result = num1 * num2;
+            operation_name = "multiply";
+            break;
         default:
             cerr << "Error: Invaild operation!";
             return 1;

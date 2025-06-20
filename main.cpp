@@ -31,6 +31,14 @@ int main() {
             result = num1 * num2;
             operation_name = "multiplication";
             break;
+        case '/':
+            if (num2==0) {
+                cerr << "Error: Division by zero!" << endl;
+                return 1;
+            }
+            result = num1 / num2;
+            operation_name = "division";
+            break;
         default:
             cerr << "Error: Invalid operation!" << endl;
             return 1;

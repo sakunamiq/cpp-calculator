@@ -10,15 +10,27 @@ void welcomeMessage() {
 
 int main() {
     welcomeMessage();
-    double num1, num2;
+    double num1, num2, result;
     char operation;
+    string operation_name;
 
     cout << "Enter first number: "; cin >> num1;
-
     cout << "Enter operation (+, -, *, /)"; cin >> operation;
-
     cout << "Enter second number: "; cin >> num2;
 
-    cout << "You entered: " << num1 << " " << operation << " " << num2 << endl;
+    switch (operation) {
+        case '+':
+            result = num1 + num2;
+            operation_name = "addition";
+            break;
+        case '-':
+            result = num1 - num2;
+            operation_name = "subtraction";
+            break;
+        default:
+            cerr << "Error: Invalid operation!" << endl;
+            return 1;
+    }
+    cout << "Result of " << operation_name << ": " << result << endl;
     return 0;
 }

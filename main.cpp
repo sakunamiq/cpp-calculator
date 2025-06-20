@@ -15,7 +15,7 @@ int main() {
     string operation_name;
 
     cout << "Enter first number: "; cin >> num1;
-    cout << "Enter operation (+, -, *, /)"; cin >> operation;
+    cout << "Enter operation (+, -, *, /): "; cin >> operation;
     cout << "Enter second number: "; cin >> num2;
 
     switch (operation) {
@@ -26,6 +26,10 @@ int main() {
         case '-':
             result = num1 - num2;
             operation_name = "subtraction";
+            break;
+        case '*':
+            result = num1 * num2;
+            operation_name = "multiplication";
             break;
         default:
             cerr << "Error: Invalid operation!" << endl;
